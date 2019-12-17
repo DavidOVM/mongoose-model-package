@@ -1,6 +1,3 @@
-const mongoose = require('mongoose')
-const schema = require('./schema')
+const generateSchema = require('./schema')
 
-const model = mongoose.model('Tester', schema)
-
-module.exports = model
+module.exports = mongoose => mongoose.model('Tester', generateSchema(mongoose))
