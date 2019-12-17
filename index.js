@@ -1,5 +1,5 @@
 
-const tester = require('./models')
+const tester = require('./models/tester')
 
 module.exports = {
   tester
