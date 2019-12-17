@@ -1,5 +1,4 @@
-
-const tester = require('./models/tester')
+const models = require('./models')
 
 class ModelPool {
   constructor() {
@@ -9,13 +8,9 @@ class ModelPool {
 
   connect(mongooseInstance) {
     this.mongoose = mongooseInstance
-    this.generateModels()
-  }
-
-  generateModels() {
-    this.models = {
-      Tester: tester(this.mongoose),
-    }
+    this.models = models.generate(mongooseInstance)
+    // this.services = services.generate(mongooseInstance)
+    // ...
   }
 }
 
