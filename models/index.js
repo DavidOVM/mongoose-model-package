@@ -1,7 +1,7 @@
 const tester = require('./tester')
 
 module.exports = {
-  generate: mongoose => {
+  generate: mongoose => ({
     Tester: tester(mongoose)
-  },
+  }),
 }
