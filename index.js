@@ -17,19 +17,6 @@ class ModelPool {
       Tester: tester(this.mongoose),
     }
   }
-
-  get models() {
-    if (this.models) {
-      return this.models
-    }
-    throw new Error(
-      '[ModelPool Error] should connect before getting the models'
-    )
-  }
-
-  set models(models) {
-    this.models = models
-  }
 }
 
 module.exports = new ModelPool()
