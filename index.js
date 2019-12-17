@@ -1,3 +1,6 @@
+
+const tester = require('./models')
+
 module.exports = {
-  hello: () => console.log('Hello!')
+  tester
 }
