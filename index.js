@@ -26,6 +26,10 @@ class ModelPool {
       '[ModelPool Error] should connect before getting the models'
     )
   }
+
+  set models(models) {
+    this.models = models
+  }
 }
 
 module.exports = new ModelPool()
